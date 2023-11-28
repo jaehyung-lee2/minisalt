@@ -24,7 +24,7 @@ read -p "Enter command: " userInput
 
 function cmd {
 	printf "========== [$1] ========\n"
-	ssh "irteam@$1" "$userInput"
+	ssh -o "StrictHostKeyChecking no" "irteam@$1" "$userInput"
 	printf "\n\n"
 }
 
